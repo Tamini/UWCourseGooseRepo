@@ -22,10 +22,10 @@
             android:id="@+id/app_header"
             android:text="UW Course Goose"
             android:fontFamily="sans_serif"
-            android:textSize="30sp"
+            android:textSize="38sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="40dp"
             android:textColor="@color/white">
             
         </TextView>
