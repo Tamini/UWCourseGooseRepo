@@ -7,6 +7,7 @@ import android.graphics.Typeface;
 import android.view.Menu;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
@@ -21,23 +22,29 @@ public class MainActivity extends Activity {
 		String fontPath = "font/gothic_0.TTF";
 		TextView appTextView = (TextView) findViewById(R.id.app_header);
 		Typeface tf = Typeface.createFromAsset(getAssets(), fontPath);
-		appTextView.setTypeface(tf);
+		RelativeLayout AHSLayout = (RelativeLayout) findViewById(R.id.ahs_layout);
+		
+		
 		/*to use density pixels, we have this scale. when we set a height or width
 		 * or something like that, we say the number of density pixels is:
 		 * 
 		 * pixels = (int) (dps * scale + 0.5f)*/
-		/*final float scale = getBaseContext().getResources().getDisplayMetrics().density;
+		final float scale = getBaseContext().getResources().getDisplayMetrics().density;
 		
-		View masterLayout = findViewById(R.id.main_linear_layout);
+		appTextView.setTypeface(tf);
+		
+		
 		ScrollView courseScroll = new ScrollView(this);		
 		LinearLayout.LayoutParams courseScrollParams = new LinearLayout.LayoutParams(
 												(int)(50 * scale + 0.5f), (int)(50 * scale + 0.5f));
 		
 		
-		masterLayout.setBackgroundColor(Color.BLACK);
+		/*AHSLayout.setOnClickListener(new OnClickListener(){
+			
+		});*/
 		courseScroll.setBackgroundColor(Color.RED);
 		
-		masterLayout.add(courseScroll);*/
+		
 		
 	}
 
