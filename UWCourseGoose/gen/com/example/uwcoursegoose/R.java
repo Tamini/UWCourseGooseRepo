@@ -31,10 +31,20 @@ public final class R {
     }
     public static final class drawable {
         public static final int background=0x7f020000;
+<<<<<<< HEAD
         public static final int gradient=0x7f020001;
         public static final int ic_launcher=0x7f020002;
         public static final int rounded_corner=0x7f020003;
         public static final int splash_background=0x7f020004;
+=======
+        public static final int environment=0x7f020001;
+        public static final int gradient=0x7f020002;
+        public static final int ic_launcher=0x7f020003;
+        public static final int math=0x7f020004;
+        public static final int rounded_corner=0x7f020005;
+        public static final int science=0x7f020006;
+        public static final int splash_background=0x7f020007;
+>>>>>>> 0cb6fc28a12147db064d7c0bacfe71152a0481a6
     }
     public static final class id {
         public static final int action_settings=0x7f090003;
