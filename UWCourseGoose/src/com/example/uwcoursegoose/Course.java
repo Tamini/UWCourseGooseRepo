@@ -20,6 +20,9 @@ public class Course {
 	ArrayList<String> comments = new ArrayList<String>();
 	private int facultyID = 3;
 	
+	
+	
+	
 	public static final int AHS_ID = 1, A_ID = 2,
 			ENG_ID = 3, ENVIRO_ID = 4, MATH_ID = 5, SCI_ID = 6;
 	
