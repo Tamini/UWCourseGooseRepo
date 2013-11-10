@@ -6,6 +6,7 @@ import android.graphics.Typeface;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
@@ -19,9 +20,11 @@ public class MainActivity extends Activity implements OnClickListener{
 		setContentView(R.layout.activity_main);
 		
 		String fontPath = "font/gothic_0.TTF";
-		TextView appTextView = (TextView) findViewById(R.id.app_header);
+		final TextView appTextView = (TextView) findViewById(R.id.app_header);
 		Typeface tf = Typeface.createFromAsset(getAssets(), fontPath);
-		RelativeLayout AHSLayout = (RelativeLayout) findViewById(R.id.ahs_layout);
+		final RelativeLayout AHSLayout = (RelativeLayout) findViewById(R.id.ahs_layout);
+		//final RelativeLayout AHSLayout = (RelativeLayout) findViewById(R.id.)
+		final ImageView AHSArrow = (ImageView) findViewById(R.id.ahs_arrow);
 		
 		
 		/*to use density pixels, we have this scale. when we set a height or width
@@ -40,7 +43,6 @@ public class MainActivity extends Activity implements OnClickListener{
 		AHSLayout.setClickable(true);
 		AHSLayout.setFocusable(true);
 		AHSLayout.setEnabled(true);
-		AHSLayout.setFocusableInTouchMode(true);
 		
 		AHSLayout.setOnClickListener(new OnClickListener(){
 
@@ -49,6 +51,8 @@ public class MainActivity extends Activity implements OnClickListener{
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				if (v.getId() == R.id.ahs_layout){
+					//AHSLayout.removeAllViews();
+					AHSArrow.setBackgroundResource(R.drawable.triangle_down);
 					
 				}
 			}
