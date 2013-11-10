@@ -30,9 +30,9 @@
         
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="120dp"
             android:layout_marginTop="2dp"
-            android:background="@drawable/environment"
+            android:background="@drawable/engineering"
             android:layout_gravity="center_vertical"
             android:gravity="center_vertical">
                 
@@ -51,7 +51,7 @@
         
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="120dp"
             android:layout_marginTop="2dp"
             android:background="@drawable/environment"
             android:layout_gravity="center_vertical"
@@ -71,7 +71,7 @@
         
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="120dp"
             android:layout_marginTop="2dp"
             android:background="@drawable/environment"
             android:layout_gravity="center_vertical"
@@ -90,7 +90,7 @@
         
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="120dp"
             android:layout_marginTop="2dp"
             android:background="@drawable/environment"
             android:layout_gravity="center_vertical"
@@ -109,7 +109,7 @@
         
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="120dp"
             android:layout_marginTop="2dp"
             android:background="@drawable/environment"
             android:layout_gravity="center_vertical"
