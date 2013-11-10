@@ -8,16 +8,19 @@
 package com.example.uwcoursegoose;
 
 public final class R {
+    public static final class array {
+        public static final int eng_array=0x7f060000;
+    }
     public static final class attr {
     }
     public static final class color {
-        public static final int AHS=0x7f070001;
-        public static final int Arts=0x7f070002;
-        public static final int Engineering=0x7f070003;
-        public static final int Environment=0x7f070004;
-        public static final int Mathematics=0x7f070005;
-        public static final int Science=0x7f070006;
-        public static final int white=0x7f070000;
+        public static final int AHS=0x7f080001;
+        public static final int Arts=0x7f080002;
+        public static final int Engineering=0x7f080003;
+        public static final int Environment=0x7f080004;
+        public static final int Mathematics=0x7f080005;
+        public static final int Science=0x7f080006;
+        public static final int white=0x7f080000;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -45,19 +48,22 @@ public final class R {
         public static final int triangle_right=0x7f02000c;
     }
     public static final class id {
-        public static final int action_settings=0x7f090006;
-<<<<<<< HEAD
-        public static final int ahs_arrow=0x7f090005;
-        public static final int ahs_layout=0x7f090004;
-        public static final int app_header=0x7f090003;
-=======
-        public static final int ahs_layout=0x7f090005;
-        public static final int app_header=0x7f090004;
-        public static final int btnAddReview=0x7f090002;
->>>>>>> 4fdd8b2ee3ca739e775dd8f589c021f9b9f89af0
-        public static final int course_code_TextView=0x7f090000;
-        public static final int course_description_TextView=0x7f090001;
-        public static final int main_scroll_layout=0x7f090003;
+        public static final int action_settings=0x7f0a000f;
+        public static final int ahs_spin=0x7f0a0005;
+        public static final int app_header=0x7f0a0004;
+        public static final int arts_arrow=0x7f0a0007;
+        public static final int arts_layout=0x7f0a0006;
+        public static final int btnAddReview=0x7f0a0002;
+        public static final int course_code_TextView=0x7f0a0000;
+        public static final int course_description_TextView=0x7f0a0001;
+        public static final int eng_spin=0x7f0a0008;
+        public static final int environment_arrow=0x7f0a000a;
+        public static final int environment_layout=0x7f0a0009;
+        public static final int main_scroll_layout=0x7f0a0003;
+        public static final int math_arrow=0x7f0a000c;
+        public static final int math_layout=0x7f0a000b;
+        public static final int science_arrow=0x7f0a000e;
+        public static final int science_layout=0x7f0a000d;
     }
     public static final class layout {
         public static final int activity_course=0x7f030000;
@@ -65,7 +71,7 @@ public final class R {
         public static final int splash=0x7f030002;
     }
     public static final class menu {
-        public static final int main=0x7f080000;
+        public static final int main=0x7f090000;
     }
     public static final class string {
         public static final int action_settings=0x7f050001;
@@ -96,10 +102,10 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f060000;
+        public static final int AppBaseTheme=0x7f070000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f060001;
+        public static final int AppTheme=0x7f070001;
     }
 }
