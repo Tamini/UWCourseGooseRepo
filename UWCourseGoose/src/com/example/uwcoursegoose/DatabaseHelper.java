@@ -8,6 +8,10 @@ import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+/* Handles all database methods, including getting and inserting rows
+ * @author Tristan Amini
+ * @date November, 2013
+ */
 public class DatabaseHelper extends SQLiteOpenHelper {
 
 	private static final String dbName = "courseDB";
@@ -23,7 +27,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		
 	}
 
-	@Override
+	/* Method run to create tables
+	 * @param SQLiteDatabase db	the database to add the tables too
+	 */
 	public void onCreate(SQLiteDatabase db) {
 		String [] courseCodes = new String[7];
 		courseCodes[0] = "SYDE_101";
@@ -43,12 +49,19 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		}
 	}
 
-	@Override
+	/* Currently unused onUpgrade method
+	 * @param SQLiteDatabase db	the database to upgrade
+	 * @param int oldVersion	the previous version of the database
+	 * @param int newVersion 	the databse version being upgraded to
+	 */
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 		// TODO Auto-generated method stub
 		
 	}
 	
+	/* Adds a row including rating and comment to the given course table
+	 * @param Course course	the course to modify the table of
+	 */
 	public void addRating(Course course)
 	{
 		SQLiteDatabase db = this.getWritableDatabase();
@@ -56,8 +69,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		values.put (KEY_COMMENT, course.getLastComment());
 		values.put (KEY_RATING, course.getLastRating());
 		db.insert(course.courseID, null, values);
+		Log.d("Database add Rating", "Rating added");
 	}
 	
+	/* Retrieves a course table from the database
+	 * @param String courseID	the course to return
+	 * @return 					the course object containing all the comments and ratings
+	 */
 	public Course getCourse(String courseID)
 	{
 		Course toReturn = new Course(courseID);
