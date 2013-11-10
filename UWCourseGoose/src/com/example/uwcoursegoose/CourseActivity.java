@@ -2,6 +2,7 @@ package com.example.uwcoursegoose;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
@@ -11,21 +12,24 @@ import android.widget.TextView;
 
 public class CourseActivity extends Activity {
 
+	DatabaseHelper db = new DatabaseHelper(this);
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_course);
 		
-		final Course course = new Course("SYDE 101");
+		Intent intent = getIntent();
+		String courseCode = intent.getExtras().getString("courseCode");
+		final Course course = db.getCourse(courseCode) ;
 		
 		
-		TextView courseCode, courseName, review1, review2, review3;
+		TextView courseCodeTV, courseName, review1, review2, review3;
 		final EditText userReview;
 		final RatingBar userRating, rBar1, rBar2, rBar3;
 		Button addReview;
 		
 		
-		courseCode = (TextView) findViewById(R.id.course_code_TextView);
+		courseCodeTV = (TextView) findViewById(R.id.course_code_TextView);
 		courseName = (TextView) findViewById(R.id.course_description_TextView);
 		addReview = (Button) findViewById(R.id.btnAddReview);
 		userRating = (RatingBar) findViewById(R.id.ratingUser);
@@ -38,7 +42,7 @@ public class CourseActivity extends Activity {
 		rBar3 = (RatingBar) findViewById(R.id.reviewBar3);
 		
 		courseName.setText(course.courseID);
-		courseCode.setText(course.getCourseDescription());
+		courseCodeTV.setText(course.getCourseDescription());
 		review1.setText(course.getLastComment());
 		rBar1.setRating((float)course.getLastRating());
 		review2.setText(course.getSingleComment(course.comments.size()-2));

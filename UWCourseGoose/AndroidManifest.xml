@@ -9,14 +9,12 @@
         android:targetSdkVersion="16" />
 
     <application
-        android:theme="@android:style/Theme.NoTitleBar"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name" >
-        
-        
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar" >
         <activity
-            android:name=".Splash"
+            android:name="com.example.uwcoursegoose.Splash"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,17 +22,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        
-        
-        
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.uwcoursegoose.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="com.example.uwcoursegoose.MAINACTIVITY" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+        </activity>
+        <activity android:name="com.example.uwcoursegoose.CourseActivity" >
         </activity>
     </application>
 

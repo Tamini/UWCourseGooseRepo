@@ -6,10 +6,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="courseDescription">Introduction to Accounting</string>
     <string name="courseTitle">AFM 101</string>
+    <string name="course_activity_str">Course Activity</string>
+    <string name="title_activity_example">ExampleActivity</string>
 
-    <string-array name="eng_array">
-        <item>SYDE 101</item>
-        <item>SYDE 111</item>
-    </string-array>
-    
 </resources>

@@ -2,6 +2,7 @@ package com.example.uwcoursegoose;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.view.Menu;
 import android.view.View;
@@ -212,6 +213,9 @@ public class MainActivity extends Activity implements OnClickListener{
 			@Override
 			public void onClick(View v) {
 				
+				Intent toCourse = new Intent(MainActivity.this, CourseActivity.class);
+				toCourse.putExtra("courseCode", "SYDE_101");
+				MainActivity.this.startActivity(toCourse);
 			}
 			
 		});
@@ -220,7 +224,9 @@ public class MainActivity extends Activity implements OnClickListener{
 
 			@Override
 			public void onClick(View v) {
-				
+				Intent toCourse = new Intent(MainActivity.this, CourseActivity.class);
+				toCourse.putExtra("courseCode", "SYDE 101L");
+				startActivity(toCourse);
 			}
 			
 		});
@@ -229,7 +235,9 @@ public class MainActivity extends Activity implements OnClickListener{
 
 			@Override
 			public void onClick(View v) {
-				
+				Intent toCourse = new Intent(MainActivity.this, CourseActivity.class);
+				toCourse.putExtra("courseCode", "SYDE 111");
+				startActivity(toCourse);
 			}
 			
 		});
@@ -238,7 +246,9 @@ public class MainActivity extends Activity implements OnClickListener{
 
 			@Override
 			public void onClick(View v) {
-				
+				Intent toCourse = new Intent(MainActivity.this, CourseActivity.class);
+				toCourse.putExtra("courseCode", "SYDE 113");
+				startActivity(toCourse);
 			}
 			
 		});
@@ -247,7 +257,9 @@ public class MainActivity extends Activity implements OnClickListener{
 
 			@Override
 			public void onClick(View v) {
-				
+				Intent toCourse = new Intent(MainActivity.this, CourseActivity.class);
+				toCourse.putExtra("courseCode", "SYDE 121");
+				startActivity(toCourse);
 			}
 			
 		});
@@ -256,7 +268,9 @@ public class MainActivity extends Activity implements OnClickListener{
 
 			@Override
 			public void onClick(View v) {
-				
+				Intent toCourse = new Intent(MainActivity.this, CourseActivity.class);
+				toCourse.putExtra("courseCode", "SYDE 161");
+				startActivity(toCourse);
 			}
 			
 		});
@@ -265,7 +279,9 @@ public class MainActivity extends Activity implements OnClickListener{
 
 			@Override
 			public void onClick(View v) {
-				
+				Intent toCourse = new Intent(MainActivity.this, CourseActivity.class);
+				toCourse.putExtra("courseCode", "SYDE 181");
+				startActivity(toCourse);
 			}
 			
 		});
