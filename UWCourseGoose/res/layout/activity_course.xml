@@ -76,6 +76,7 @@
                 android:id="@+id/review1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textStyle="italic"
                 android:paddingTop="10dp" />
 
             <RatingBar
@@ -86,7 +87,8 @@
             <TextView
                 android:id="@+id/review2"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content" 
+                android:textStyle="italic"/>
 
             <RatingBar
                 android:id="@+id/reviewBar2"
@@ -96,7 +98,8 @@
             <TextView
                 android:id="@+id/review3"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:textStyle="italic" />
 
             <RatingBar
                 android:id="@+id/reviewBar3"
