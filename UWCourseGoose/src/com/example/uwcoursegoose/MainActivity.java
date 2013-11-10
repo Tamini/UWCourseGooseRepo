@@ -206,6 +206,70 @@ public class MainActivity extends Activity implements OnClickListener{
 		scienceLayout.setOnClickListener(headerClick);
 		
 		
+		//If the user selects syde101. same for all below
+		syde101.setOnClickListener(new OnClickListener(){
+
+			@Override
+			public void onClick(View v) {
+				
+			}
+			
+		});
+		
+		syde101L.setOnClickListener(new OnClickListener(){
+
+			@Override
+			public void onClick(View v) {
+				
+			}
+			
+		});
+		
+		syde111.setOnClickListener(new OnClickListener(){
+
+			@Override
+			public void onClick(View v) {
+				
+			}
+			
+		});
+		
+		syde113.setOnClickListener(new OnClickListener(){
+
+			@Override
+			public void onClick(View v) {
+				
+			}
+			
+		});
+		
+		syde121.setOnClickListener(new OnClickListener(){
+
+			@Override
+			public void onClick(View v) {
+				
+			}
+			
+		});
+		
+		syde161.setOnClickListener(new OnClickListener(){
+
+			@Override
+			public void onClick(View v) {
+				
+			}
+			
+		});
+		
+		syde181.setOnClickListener(new OnClickListener(){
+
+			@Override
+			public void onClick(View v) {
+				
+			}
+			
+		});
+		
 		
 	}
 	
