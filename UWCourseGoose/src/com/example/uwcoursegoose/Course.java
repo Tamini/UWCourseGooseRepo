@@ -18,9 +18,12 @@ public class Course {
 	public String courseDescription;
 	ArrayList<Double> ratings = new ArrayList<Double>();
 	ArrayList<String> comments = new ArrayList<String>();
+	private int facultyID = 3;
+	
+	public static final int AHS_ID = 1, A_ID = 2,
+			ENG_ID = 3, ENVIRO_ID = 4, MATH_ID = 5, SCI_ID = 6;
 	
 	//Constructor
-	
 	public Course(String course){
 		/**
 		 * Set the course's code to the one you want
@@ -28,6 +31,9 @@ public class Course {
 		 */
 		courseID = course;
 		this.addNewRating(5.0);
+		this.addNewComment("No comment.");
+		this.setFacultyID(ENG_ID);
+		
 	}
 	
 	public void setCourseDescription(String courseDesc){
@@ -39,6 +45,14 @@ public class Course {
 		
 	}
 	
+	public void setFacultyID(final int ID)
+	{
+		facultyID = ID;
+	}
+	
+	public final int getFacultyID(){
+		return facultyID;
+	}
 	public void addNewRating(double indiRating){
 		/**
 		 * Adds a rating
