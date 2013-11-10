@@ -32,16 +32,17 @@
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:layout_marginTop="2dp"
-            android:background="@drawable/engineering"
+            android:background="@drawable/ahs"
             android:layout_gravity="center_vertical"
             android:gravity="center_vertical">
                 
                 <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
                 android:layout_marginRight="20dp"
+                android:layout_marginLeft="10dp"
                 android:text="drop"
-                android:background="@drawable/math">                
+                android:background="@drawable/triangle_right">                
             	</ImageView>
          
             
@@ -58,11 +59,12 @@
             android:gravity="center_vertical">
                 
                 <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
                 android:layout_marginRight="20dp"
+                android:layout_marginLeft="10dp"
                 android:text="drop"
-                android:background="@drawable/math">                
+                android:background="@drawable/triangle_right">                
             	</ImageView>
          
             
@@ -73,16 +75,17 @@
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:layout_marginTop="2dp"
-            android:background="@drawable/environment"
+            android:background="@drawable/engineering"
             android:layout_gravity="center_vertical"
             android:gravity="center_vertical">
                 
                 <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
                 android:layout_marginRight="20dp"
+                android:layout_marginLeft="10dp"
                 android:text="drop"
-                android:background="@drawable/math">                
+                android:background="@drawable/triangle_right">                
             	</ImageView>
          
             
@@ -92,16 +95,17 @@
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:layout_marginTop="2dp"
-            android:background="@drawable/environment"
+            android:background="@drawable/math"
             android:layout_gravity="center_vertical"
             android:gravity="center_vertical">
                 
                 <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
                 android:layout_marginRight="20dp"
+                android:layout_marginLeft="10dp"
                 android:text="drop"
-                android:background="@drawable/math">                
+                android:background="@drawable/triangle_right">                
             	</ImageView>
          
             
@@ -111,16 +115,17 @@
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:layout_marginTop="2dp"
-            android:background="@drawable/environment"
+            android:background="@drawable/science"
             android:layout_gravity="center_vertical"
             android:gravity="center_vertical">
                 
                 <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
                 android:layout_marginRight="20dp"
+                android:layout_marginLeft="10dp"
                 android:text="drop"
-                android:background="@drawable/math">                
+                android:background="@drawable/triangle_right">                
             	</ImageView>
          
             
@@ -130,16 +135,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
-            android:background="@drawable/environment"
+            android:background="@drawable/ahs"
             android:layout_gravity="center_vertical"
             android:gravity="center_vertical">
                 
                 <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
                 android:layout_marginRight="20dp"
+                android:layout_marginLeft="10dp"
                 android:text="drop"
-                android:background="@drawable/math">                
+                android:background="@drawable/triangle_right">                
             	</ImageView>
          
             
