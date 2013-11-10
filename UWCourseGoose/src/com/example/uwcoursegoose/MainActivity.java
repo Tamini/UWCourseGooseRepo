@@ -3,11 +3,13 @@ package com.example.uwcoursegoose;
 import android.os.Bundle;
 import android.app.Activity;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.view.Menu;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.LinearLayout.LayoutParams;
+import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
@@ -16,6 +18,10 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
+		String fontPath = "font/gothic_0.TTF";
+		TextView appTextView = (TextView) findViewById(R.id.app_header);
+		Typeface tf = Typeface.createFromAsset(getAssets(), fontPath);
+		appTextView.setTypeface(tf);
 		/*to use density pixels, we have this scale. when we set a height or width
 		 * or something like that, we say the number of density pixels is:
 		 * 
