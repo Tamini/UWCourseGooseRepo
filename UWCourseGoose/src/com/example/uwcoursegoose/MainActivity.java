@@ -2,17 +2,16 @@ package com.example.uwcoursegoose;
 
 import android.os.Bundle;
 import android.app.Activity;
-import android.graphics.Color;
 import android.graphics.Typeface;
 import android.view.Menu;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
-import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements OnClickListener{
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -38,12 +37,23 @@ public class MainActivity extends Activity {
 		LinearLayout.LayoutParams courseScrollParams = new LinearLayout.LayoutParams(
 												(int)(50 * scale + 0.5f), (int)(50 * scale + 0.5f));
 		
+		AHSLayout.setClickable(true);
+		AHSLayout.setFocusable(true);
+		AHSLayout.setEnabled(true);
+		AHSLayout.setFocusableInTouchMode(true);
 		
-		/*AHSLayout.setOnClickListener(new OnClickListener(){
+		AHSLayout.setOnClickListener(new OnClickListener(){
+
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				if (v.getId() == R.id.ahs_layout){
+					
+				}
+			}
 			
-		});*/
-		courseScroll.setBackgroundColor(Color.RED);
-		
+		});
 		
 		
 	}
@@ -53,6 +63,13 @@ public class MainActivity extends Activity {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
+	}
+
+
+	@Override
+	public void onClick(View v) {
+		// TODO Auto-generated method stub
+		System.out.print("asdfkj");
 	}
 
 }
