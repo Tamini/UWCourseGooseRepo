@@ -28,172 +28,122 @@
             
         </TextView>
         
-        <LinearLayout
-            android:orientation="horizontal"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="3dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:background="@color/white">
-            
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/environment"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical">
+                
+                <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:layout_marginRight="20dp"
-                android:text="drop">                
-            </Button>
+                android:text="drop"
+                android:background="@drawable/math">                
+            	</ImageView>
+         
             
-            <TextView 
-                android:text="Applied Health Sciences"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="center_vertical"
-                android:textColor="@color/AHS"
-                android:textSize="17sp"
-                android:textStyle="bold"/>         
+     	</RelativeLayout>
             
-        </LinearLayout>
+                   
         
-        <LinearLayout
-            android:orientation="horizontal"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="3dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:background="@color/white">
-            
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/environment"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical">
+                
+                <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:layout_marginRight="20dp"
-                android:text="drop">                
-            </Button>
+                android:text="drop"
+                android:background="@drawable/math">                
+            	</ImageView>
+         
             
-            <TextView 
-                android:text="Arts"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="center_vertical"
-                android:textColor="@color/Arts"
-                android:textSize="17sp"
-                android:textStyle="bold"/>            
-            
-            
-        </LinearLayout>
+     	</RelativeLayout>
+     	
         
-        <LinearLayout
-            android:orientation="horizontal"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="3dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:background="@color/white">
-            
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/environment"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical">
+                
+                <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:layout_marginRight="20dp"
-                android:text="drop">                
-            </Button>
+                android:text="drop"
+                android:background="@drawable/math">                
+            	</ImageView>
+         
             
-            <TextView 
-                android:text="Engineering"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="center_vertical"
-                android:textColor="@color/Engineering"
-                android:textSize="17sp"
-                android:textStyle="bold"/>            
-            
-            
-        </LinearLayout>
+     	</RelativeLayout>
         
-        <LinearLayout
-            android:orientation="horizontal"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="3dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:background="@color/white">
-            
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/environment"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical">
+                
+                <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:layout_marginRight="20dp"
-                android:text="drop">                
-            </Button>
+                android:text="drop"
+                android:background="@drawable/math">                
+            	</ImageView>
+         
             
-            <TextView 
-                android:text="Environment"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="center_vertical"
-                android:textColor="@color/Environment"
-                android:textSize="17sp"
-                android:textStyle="bold"/>            
-            
-            
-        </LinearLayout>
+     	</RelativeLayout>
         
-        <LinearLayout
-            android:orientation="horizontal"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="3dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:background="@color/white">
-            
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/environment"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical">
+                
+                <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:layout_marginRight="20dp"
-                android:text="drop">                
-            </Button>
+                android:text="drop"
+                android:background="@drawable/math">                
+            	</ImageView>
+         
             
-            <TextView 
-                android:text="Mathematics"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="center_vertical"
-                android:textColor="@color/Mathematics"
-                android:textSize="17sp"
-                android:textStyle="bold"/>            
-            
-            
-        </LinearLayout>
+     	</RelativeLayout>
         
-        <LinearLayout
-            android:orientation="horizontal"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="3dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:background="@color/white">
-            
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/environment"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical">
+                
+                <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:layout_marginRight="20dp"
-                android:text="drop">                
-            </Button>
+                android:text="drop"
+                android:background="@drawable/math">                
+            	</ImageView>
+         
             
-            <TextView 
-                android:text="Science"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="center_vertical"
-                android:textColor="@color/Science"
-                android:textSize="17sp"
-                android:textStyle="bold"/>            
-            
-            
-        </LinearLayout>
+     	</RelativeLayout>
         
     </LinearLayout>
  
