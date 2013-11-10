@@ -3,6 +3,7 @@ package com.example.uwcoursegoose;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RatingBar;
@@ -24,8 +25,18 @@ public class CourseActivity extends Activity {
 		courseCode = (TextView) findViewById(R.id.course_code_TextView);
 		courseName = (TextView) findViewById(R.id.course_description_TextView);
 		addReview = (Button) findViewById(R.id.btnAddReview);
+		userRating = (RatingBar) findViewById(R.id.ratingUser);
+		userReview = (EditText) findViewById(R.id.editUserReview);
 		
-		
+		addReview.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				
+				
+			}
+		})
 			
 	}
 
