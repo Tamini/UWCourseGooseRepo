@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
+import android.widget.LinearLayout.LayoutParams;
 
 public class MainActivity extends Activity {
 
@@ -15,10 +16,22 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		View masterLayout = findViewById(R.id.main_linear_layout);
-		masterLayout.setBackgroundColor(Color.BLACK);
+		/*to use density pixels, we have this scale. when we set a height or width
+		 * or something like that, we say the number of density pixels is:
+		 * 
+		 * pixels = (int) (dps * scale + 0.5f)*/
+		/*final float scale = getBaseContext().getResources().getDisplayMetrics().density;
 		
-		//ScrollView courseScroll = new ScrollView(this);
+		View masterLayout = findViewById(R.id.main_linear_layout);
+		ScrollView courseScroll = new ScrollView(this);		
+		LinearLayout.LayoutParams courseScrollParams = new LinearLayout.LayoutParams(
+												(int)(50 * scale + 0.5f), (int)(50 * scale + 0.5f));
+		
+		
+		masterLayout.setBackgroundColor(Color.BLACK);
+		courseScroll.setBackgroundColor(Color.RED);
+		
+		masterLayout.add(courseScroll);*/
 		
 	}
 

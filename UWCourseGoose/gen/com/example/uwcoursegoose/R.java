@@ -10,6 +10,9 @@ package com.example.uwcoursegoose;
 public final class R {
     public static final class attr {
     }
+    public static final class color {
+        public static final int white=0x7f070000;
+    }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
 
@@ -24,14 +27,14 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f080001;
-        public static final int main_linear_layout=0x7f080000;
+        public static final int action_settings=0x7f090001;
+        public static final int main_scroll_layout=0x7f090000;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
     }
     public static final class menu {
-        public static final int main=0x7f070000;
+        public static final int main=0x7f080000;
     }
     public static final class string {
         public static final int action_settings=0x7f050001;
