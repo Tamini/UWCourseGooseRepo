@@ -27,6 +27,7 @@ public class Course {
 		 * @param CourseID
 		 */
 		courseID = course;
+		this.addNewRating(5.0);
 	}
 	
 	public void setCourseDescription(String courseDesc){
