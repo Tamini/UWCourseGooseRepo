@@ -9,5 +9,11 @@
     </style>
     
 <color name="white">#FFFFFF</color>
+<color name="AHS">#36A4BA</color>
+<color name="Arts">#E8AA1A</color>
+<color name="Engineering">#7D21D9</color>
+<color name="Environment">#81D61A</color>
+<color name="Mathematics">#FF24BD</color>
+<color name="Science">#4050F7</color>
 
 </resources>
