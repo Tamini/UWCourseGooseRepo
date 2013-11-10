@@ -16,9 +16,12 @@ public class CourseActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_course);
 		
-		TextView courseCode, courseName;
-		EditText userReview;
-		RatingBar userRating;
+		final Course course = new Course("SYDE 101");
+		
+		
+		TextView courseCode, courseName, review1, review2, review3;
+		final EditText userReview;
+		final RatingBar userRating, rBar1, rBar2, rBar3;
 		Button addReview;
 		
 		
@@ -27,16 +30,30 @@ public class CourseActivity extends Activity {
 		addReview = (Button) findViewById(R.id.btnAddReview);
 		userRating = (RatingBar) findViewById(R.id.ratingUser);
 		userReview = (EditText) findViewById(R.id.editUserReview);
+		review1 = (TextView) findViewById(R.id.review1);
+		review2 = (TextView) findViewById(R.id.review2);
+		review3 = (TextView) findViewById(R.id.review3);
+		rBar1 = (RatingBar) findViewById(R.id.reviewBar1);
+		rBar2 = (RatingBar) findViewById(R.id.reviewBar2);
+		rBar3 = (RatingBar) findViewById(R.id.reviewBar3);
 		
+		review1.setText(course.getLastComment());
+		rBar1.setRating((float)course.getLastRating());
+		
+		
+		courseName.setText(course.courseID);
+		courseCode.setText(course.getCourseDescription());
 		addReview.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				
+				course.addNewComment(userReview.getText().toString());
+				course.addNewRating(userRating.getRating());
 				
 			}
-		})
+		});
 			
 	}
 
