@@ -37,12 +37,16 @@ public class CourseActivity extends Activity {
 		rBar2 = (RatingBar) findViewById(R.id.reviewBar2);
 		rBar3 = (RatingBar) findViewById(R.id.reviewBar3);
 		
-		review1.setText(course.getLastComment());
-		rBar1.setRating((float)course.getLastRating());
-		
-		
 		courseName.setText(course.courseID);
 		courseCode.setText(course.getCourseDescription());
+		review1.setText(course.getLastComment());
+		rBar1.setRating((float)course.getLastRating());
+		review2.setText(course.getSingleComment(course.comments.size()-2));
+		rBar2.setRating((float)course.getSingleRating(course.ratings.size()-2));
+		review3.setText(course.getSingleComment(course.comments.size()-3));
+		rBar3.setRating((float)course.getSingleRating(course.ratings.size()-3));
+		
+		
 		addReview.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
