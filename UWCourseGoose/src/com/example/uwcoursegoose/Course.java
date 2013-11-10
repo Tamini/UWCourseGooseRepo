@@ -95,12 +95,12 @@ public class Course {
 	
 	public String getLastComment ()
 	{
-		return comments.get(comments.size());
+		return comments.get(comments.size()-1);
 	}
 	
 	public double getLastRating ()
 	{
-		return ratings.get(ratings.size());
+		return ratings.get(ratings.size()-1);
 	}
 	
 	public double getTotalAverage(){
