@@ -39,6 +39,27 @@ public class Course {
 		this.setCourseDescription("A cool course.");
 		
 	}
+	public Course(String course, DatabaseHelper db){
+		/**
+		 * Set the course's code to the one you want
+		 * @param CourseID
+		 */
+		courseID = course;
+		this.addNewRating(5.0);
+		this.addNewComment("No comment.");
+		this.setFacultyID(ENG_ID);
+		this.setCourseDescription("A cool course.");
+		
+	}
+	public ArrayList<Double> getAllRatings()
+	{
+		return ratings;
+	}
+	
+	public ArrayList<String> getAllComments()
+	{
+		return comments;
+	}
 	
 	public void setCourseDescription(String courseDesc){
 		/**

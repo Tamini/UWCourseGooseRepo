@@ -2,8 +2,11 @@ package com.example.uwcoursegoose;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Typeface;
+import android.util.Log;
 import android.view.Menu;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup.LayoutParams;
@@ -13,8 +16,10 @@ import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-public class MainActivity extends Activity implements OnClickListener{
-
+public class MainActivity extends Activity implements OnClickListener {
+	
+	DatabaseHelper db = new DatabaseHelper(this);
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -37,16 +42,17 @@ public class MainActivity extends Activity implements OnClickListener{
 		final ImageView enviroArrow = (ImageView) findViewById(R.id.environment_arrow);
 		final ImageView mathArrow = (ImageView) findViewById(R.id.math_arrow);
 		final ImageView scienceArrow = (ImageView) findViewById(R.id.science_arrow);
-		
+
 		final boolean[] facultyClick = new boolean[6];
-		
-		for (int x = 0; x < facultyClick.length; x++){
+
+		for (int x = 0; x < facultyClick.length; x++) {
 			facultyClick[x] = false;
 		}
-		
-		final LinearLayout engList = (LinearLayout)findViewById(R.id.eng_list);
-		LinearLayout.LayoutParams listParams = new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
-		
+
+		final LinearLayout engList = (LinearLayout) findViewById(R.id.eng_list);
+		LinearLayout.LayoutParams listParams = new LinearLayout.LayoutParams(
+				LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
+
 		final TextView syde101 = new TextView(this);
 		final TextView syde101L = new TextView(this);
 		final TextView syde111 = new TextView(this);
@@ -59,12 +65,29 @@ public class MainActivity extends Activity implements OnClickListener{
 		syde101.setText("SYDE 101");
 		syde101.setTextSize(9 * scale + 0.5f);
 		syde101.setTypeface(tf);
-		
+		syde101.setOnTouchListener(new View.OnTouchListener() {
+			
+			@Override
+			public boolean onTouch(View v, MotionEvent event) {
+				// TODO Auto-generated method stub
+				String code = "SYDE_101";
+				System.out.println(code);
+				if(event.getAction() == MotionEvent.ACTION_UP) {
+					Intent openCourse = new Intent("com.example.uwcoursegoose.COURSEACTIVITY");
+					openCourse.putExtra("key", code);
+					startActivity(openCourse);
+		            return true;
+				}
+				return false;
+			}
+		});
+
 		syde101L.setLayoutParams(listParams);
 		syde101L.setText("SYDE 101L");
 		syde101L.setTextSize(9 * scale + 0.5f);
 		syde101L.setTypeface(tf);
 		
+
 		syde111.setLayoutParams(listParams);
 		syde111.setText("SYDE 111");
 		syde111.setTextSize(9 * scale + 0.5f);
@@ -85,60 +108,63 @@ public class MainActivity extends Activity implements OnClickListener{
 		syde161.setTextSize(9 * scale + 0.5f);
 		syde161.setTypeface(tf);
 		
+
 		syde181.setLayoutParams(listParams);
 		syde181.setText("SYDE 181");
 		syde181.setTextSize(9 * scale + 0.5f);
 		syde181.setTypeface(tf);
+		
 		listParams.setMargins((int) (10 * scale + 0.5f), 0, 0, 0);
-		
-		/*to use density pixels, we have this scale. when we set a height or width
-		 * or something like that, we say the number of density pixels is:
+
+		/*
+		 * to use density pixels, we have this scale. when we set a height or
+		 * width or something like that, we say the number of density pixels is:
 		 * 
-		 * pixels = (int) (dps * scale + 0.5f)*/
-		
+		 * pixels = (int) (dps * scale + 0.5f)
+		 */
+
 		appTextView.setTypeface(tf);
-		
-		
-		ScrollView courseScroll = new ScrollView(this);		
+
+		ScrollView courseScroll = new ScrollView(this);
 		LinearLayout.LayoutParams courseScrollParams = new LinearLayout.LayoutParams(
-												(int)(50 * scale + 0.5f), (int)(50 * scale + 0.5f));
-		
+				(int) (50 * scale + 0.5f), (int) (50 * scale + 0.5f));
+
 		AHSLayout.setClickable(true);
 		AHSLayout.setFocusable(true);
 		AHSLayout.setEnabled(true);
-		
-		OnClickListener headerClick = new OnClickListener(){
+
+		OnClickListener headerClick = new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				
-				switch (v.getId()){
+
+				switch (v.getId()) {
 				case R.id.ahs_layout:
-					if (!facultyClick[0]){
+					if (!facultyClick[0]) {
 						AHSArrow.setBackgroundResource(R.drawable.triangle_down);
 						facultyClick[0] = true;
-					}
-					else{
+					} else {
 						AHSArrow.setBackgroundResource(R.drawable.triangle_right);
 						facultyClick[0] = false;
 					}
 					break;
 				case R.id.arts_layout:
-					if (!facultyClick[1]){
-						artsArrow.setBackgroundResource(R.drawable.triangle_down);
+					if (!facultyClick[1]) {
+						artsArrow
+								.setBackgroundResource(R.drawable.triangle_down);
 						facultyClick[1] = true;
-					}
-					else {
-						artsArrow.setBackgroundResource(R.drawable.triangle_right);
+					} else {
+						artsArrow
+								.setBackgroundResource(R.drawable.triangle_right);
 						facultyClick[1] = false;
 					}
 					break;
 				case R.id.engineering_layout:
-					if (!facultyClick[2]){
+					if (!facultyClick[2]) {
 						engArrow.setBackgroundResource(R.drawable.triangle_down);
 						facultyClick[2] = true;
-						//engLayout.addView(engList);
+						// engLayout.addView(engList);
 						engList.addView(syde101);
 						engList.addView(syde101L);
 						engList.addView(syde111);
@@ -147,8 +173,7 @@ public class MainActivity extends Activity implements OnClickListener{
 						engList.addView(syde161);
 						engList.addView(syde181);
 
-					}
-					else {
+					} else {
 						engArrow.setBackgroundResource(R.drawable.triangle_right);
 						facultyClick[2] = false;
 						engLayout.removeView(engList);
@@ -163,117 +188,116 @@ public class MainActivity extends Activity implements OnClickListener{
 					}
 					break;
 				case R.id.environment_layout:
-					if (!facultyClick[3]){
-						enviroArrow.setBackgroundResource(R.drawable.triangle_down);
+					if (!facultyClick[3]) {
+						enviroArrow
+								.setBackgroundResource(R.drawable.triangle_down);
 						facultyClick[3] = true;
-					}
-					else {
-						enviroArrow.setBackgroundResource(R.drawable.triangle_right);
+					} else {
+						enviroArrow
+								.setBackgroundResource(R.drawable.triangle_right);
 						facultyClick[3] = false;
 					}
 					break;
 				case R.id.math_layout:
-					if (!facultyClick[4]){
-						mathArrow.setBackgroundResource(R.drawable.triangle_down);
+					if (!facultyClick[4]) {
+						mathArrow
+								.setBackgroundResource(R.drawable.triangle_down);
 						facultyClick[4] = true;
-					}
-					else {
-						mathArrow.setBackgroundResource(R.drawable.triangle_right);
+					} else {
+						mathArrow
+								.setBackgroundResource(R.drawable.triangle_right);
 						facultyClick[4] = false;
 					}
 					break;
 				case R.id.science_layout:
-					if (!facultyClick[5]){
-						scienceArrow.setBackgroundResource(R.drawable.triangle_down);
+					if (!facultyClick[5]) {
+						scienceArrow
+								.setBackgroundResource(R.drawable.triangle_down);
 						facultyClick[5] = true;
-					}
-					else{
-						scienceArrow.setBackgroundResource(R.drawable.triangle_right);
+					} else {
+						scienceArrow
+								.setBackgroundResource(R.drawable.triangle_right);
 						facultyClick[5] = false;
 					}
 					break;
 
 				}
 			}
-			
+
 		};
-		
+
 		AHSLayout.setOnClickListener(headerClick);
 		artsLayout.setOnClickListener(headerClick);
 		engLayout.setOnClickListener(headerClick);
 		enviroLayout.setOnClickListener(headerClick);
 		mathLayout.setOnClickListener(headerClick);
 		scienceLayout.setOnClickListener(headerClick);
-		
-		
-		//If the user selects syde101. same for all below
-		syde101.setOnClickListener(new OnClickListener(){
+
+		// If the user selects syde101. same for all below
+		syde101.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
-				
+
 			}
-			
+
 		});
-		
-		syde101L.setOnClickListener(new OnClickListener(){
+
+		syde101L.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
-				
+
 			}
-			
+
 		});
-		
-		syde111.setOnClickListener(new OnClickListener(){
+
+		syde111.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
-				
+
 			}
-			
+
 		});
-		
-		syde113.setOnClickListener(new OnClickListener(){
+
+		syde113.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
-				
+
 			}
-			
+
 		});
-		
-		syde121.setOnClickListener(new OnClickListener(){
+
+		syde121.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
-				
+
 			}
-			
+
 		});
-		
-		syde161.setOnClickListener(new OnClickListener(){
+
+		syde161.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
-				
+
 			}
-			
+
 		});
-		
-		syde181.setOnClickListener(new OnClickListener(){
+
+		syde181.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
-				
+
 			}
-			
+
 		});
-		
-		
+
 	}
-	
-	
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -282,15 +306,14 @@ public class MainActivity extends Activity implements OnClickListener{
 		return true;
 	}
 
-
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
 		System.out.print("asdfkj");
 	}
 
-	void displayEngCourses(){
-		
+	void displayEngCourses() {
+
 	}
-	
+
 }
