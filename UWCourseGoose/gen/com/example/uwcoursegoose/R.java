@@ -44,7 +44,8 @@ public final class R {
         public static final int triangle_right=0x7f02000b;
     }
     public static final class id {
-        public static final int action_settings=0x7f090003;
+        public static final int action_settings=0x7f090004;
+        public static final int app_header=0x7f090003;
         public static final int course_code_TextView=0x7f090000;
         public static final int course_description_TextView=0x7f090001;
         public static final int main_scroll_layout=0x7f090002;
