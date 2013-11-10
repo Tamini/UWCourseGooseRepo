@@ -73,6 +73,16 @@ public class Course {
 		return ratings.get(index);
 	}
 	
+	public String getLastComment ()
+	{
+		return comments.get(comments.size());
+	}
+	
+	public double getLastRating ()
+	{
+		return ratings.get(ratings.size());
+	}
+	
 	public double getTotalAverage(){
 		/**Calculates the total average in all of the ratings
 		 * @return Average of all the ratings
