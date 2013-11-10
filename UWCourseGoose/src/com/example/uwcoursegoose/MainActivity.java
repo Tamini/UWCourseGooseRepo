@@ -6,6 +6,7 @@ import android.graphics.Typeface;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup.LayoutParams;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -18,7 +19,8 @@ public class MainActivity extends Activity implements OnClickListener{
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		
+		final float scale = getBaseContext().getResources().getDisplayMetrics().density;
+
 		String fontPath = "font/gothic_0.TTF";
 		final TextView appTextView = (TextView) findViewById(R.id.app_header);
 		Typeface tf = Typeface.createFromAsset(getAssets(), fontPath);
@@ -35,19 +37,64 @@ public class MainActivity extends Activity implements OnClickListener{
 		final ImageView enviroArrow = (ImageView) findViewById(R.id.environment_arrow);
 		final ImageView mathArrow = (ImageView) findViewById(R.id.math_arrow);
 		final ImageView scienceArrow = (ImageView) findViewById(R.id.science_arrow);
-
+		
 		final boolean[] facultyClick = new boolean[6];
 		
 		for (int x = 0; x < facultyClick.length; x++){
 			facultyClick[x] = false;
 		}
 		
+		final LinearLayout engList = (LinearLayout)findViewById(R.id.eng_list);
+		LinearLayout.LayoutParams listParams = new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
+		
+		final TextView syde101 = new TextView(this);
+		final TextView syde101L = new TextView(this);
+		final TextView syde111 = new TextView(this);
+		final TextView syde113 = new TextView(this);
+		final TextView syde121 = new TextView(this);
+		final TextView syde161 = new TextView(this);
+		final TextView syde181 = new TextView(this);
+
+		syde101.setLayoutParams(listParams);
+		syde101.setText("SYDE 101");
+		syde101.setTextSize(9 * scale + 0.5f);
+		syde101.setTypeface(tf);
+		
+		syde101L.setLayoutParams(listParams);
+		syde101L.setText("SYDE 101L");
+		syde101L.setTextSize(9 * scale + 0.5f);
+		syde101L.setTypeface(tf);
+		
+		syde111.setLayoutParams(listParams);
+		syde111.setText("SYDE 111");
+		syde111.setTextSize(9 * scale + 0.5f);
+		syde111.setTypeface(tf);
+		
+		syde113.setLayoutParams(listParams);
+		syde113.setText("SYDE 113");
+		syde113.setTextSize(9 * scale + 0.5f);
+		syde113.setTypeface(tf);
+		
+		syde121.setLayoutParams(listParams);
+		syde121.setText("SYDE 121");
+		syde121.setTextSize(9 * scale + 0.5f);
+		syde121.setTypeface(tf);
+		
+		syde161.setLayoutParams(listParams);
+		syde161.setText("SYDE 161");
+		syde161.setTextSize(9 * scale + 0.5f);
+		syde161.setTypeface(tf);
+		
+		syde181.setLayoutParams(listParams);
+		syde181.setText("SYDE 181");
+		syde181.setTextSize(9 * scale + 0.5f);
+		syde181.setTypeface(tf);
+		listParams.setMargins((int) (10 * scale + 0.5f), 0, 0, 0);
 		
 		/*to use density pixels, we have this scale. when we set a height or width
 		 * or something like that, we say the number of density pixels is:
 		 * 
 		 * pixels = (int) (dps * scale + 0.5f)*/
-		final float scale = getBaseContext().getResources().getDisplayMetrics().density;
 		
 		appTextView.setTypeface(tf);
 		
@@ -91,10 +138,28 @@ public class MainActivity extends Activity implements OnClickListener{
 					if (!facultyClick[2]){
 						engArrow.setBackgroundResource(R.drawable.triangle_down);
 						facultyClick[2] = true;
+						//engLayout.addView(engList);
+						engList.addView(syde101);
+						engList.addView(syde101L);
+						engList.addView(syde111);
+						engList.addView(syde113);
+						engList.addView(syde121);
+						engList.addView(syde161);
+						engList.addView(syde181);
+
 					}
 					else {
 						engArrow.setBackgroundResource(R.drawable.triangle_right);
 						facultyClick[2] = false;
+						engLayout.removeView(engList);
+						engList.removeView(syde101);
+						engList.removeView(syde101L);
+						engList.removeView(syde111);
+						engList.removeView(syde113);
+						engList.removeView(syde121);
+						engList.removeView(syde161);
+						engList.removeView(syde181);
+
 					}
 					break;
 				case R.id.environment_layout:
@@ -160,4 +225,8 @@ public class MainActivity extends Activity implements OnClickListener{
 		System.out.print("asdfkj");
 	}
 
+	void displayEngCourses(){
+		
+	}
+	
 }
