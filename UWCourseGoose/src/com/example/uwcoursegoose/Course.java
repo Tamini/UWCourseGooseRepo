@@ -33,6 +33,7 @@ public class Course {
 		this.addNewRating(5.0);
 		this.addNewComment("No comment.");
 		this.setFacultyID(ENG_ID);
+		this.setCourseDescription("A cool course.");
 		
 	}
 	
@@ -43,6 +44,10 @@ public class Course {
 		 */
 		courseDescription = courseDesc;
 		
+	}
+	
+	public String getCourseDescription(){
+		return courseDescription;
 	}
 	
 	public void setFacultyID(final int ID)
