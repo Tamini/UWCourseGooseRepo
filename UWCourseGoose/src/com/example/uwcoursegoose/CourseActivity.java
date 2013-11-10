@@ -20,13 +20,11 @@ public class CourseActivity extends Activity {
 		RatingBar userRating;
 		Button addReview;
 		
-		/*
-		courseCode = (TextView) findViewById(R.id.tvCourseTitle);
-		courseName = (TextView) findViewById(R.id.tvCourseDescription);
-		userReview = (EditText) findViewById(R.id.txtUserComment);
-		userRating = (RatingBar) findViewById(R.id.rateUser);
+		
+		courseCode = (TextView) findViewById(R.id.course_code_TextView);
+		courseName = (TextView) findViewById(R.id.course_description_TextView);
 		addReview = (Button) findViewById(R.id.btnAddReview);
-		*/
+		
 		
 			
 	}

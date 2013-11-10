@@ -46,12 +46,18 @@ public final class R {
     }
     public static final class id {
         public static final int action_settings=0x7f090006;
+<<<<<<< HEAD
         public static final int ahs_arrow=0x7f090005;
         public static final int ahs_layout=0x7f090004;
         public static final int app_header=0x7f090003;
+=======
+        public static final int ahs_layout=0x7f090005;
+        public static final int app_header=0x7f090004;
+        public static final int btnAddReview=0x7f090002;
+>>>>>>> 4fdd8b2ee3ca739e775dd8f589c021f9b9f89af0
         public static final int course_code_TextView=0x7f090000;
         public static final int course_description_TextView=0x7f090001;
-        public static final int main_scroll_layout=0x7f090002;
+        public static final int main_scroll_layout=0x7f090003;
     }
     public static final class layout {
         public static final int activity_course=0x7f030000;

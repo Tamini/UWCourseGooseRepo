@@ -13,15 +13,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         
-        <TextView 
+        <TextView
             android:id="@+id/course_code_TextView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:text="@string/courseTitle" />
         
-        <TextView 
+        <TextView
             android:id="@+id/course_description_TextView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:text="@string/courseDescription" />
         
         <LinearLayout 
             android:orientation="horizontal"
@@ -44,6 +48,7 @@
                 android:layout_gravity="center_vertical">
 
                 <Button
+                    android:id="@+id/btnAddReview"
                     android:layout_width="wrap_content"
                     android:layout_height="31dp"
                     android:gravity="center_vertical"
