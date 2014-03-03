@@ -23,7 +23,7 @@ data = json.loads(website.read().decode("utf-8"))
 #creates the file to write to
 
 faculties = open('faculties.csv', 'w+')
-faculties.write("Faculty ID,Faculty name")
+faculties.write("Faculty ID,Faculty name\n")
 
 for items in data['data']:
 
