@@ -10,7 +10,7 @@ from pprint import pprint
 
 print("Getting all the Units from the faculties")
 
-
+#gets all the units 
 baseUrl = "https://api.uwaterloo.ca/v2/codes/units.json"
 api_key = input("Enter the api key here: ") #asked to enter api key because having the api key as open source in code is not a smart idea
 
@@ -28,9 +28,11 @@ faculties = open('faculties.csv', 'r')
 unitFile = open('units.csv', 'w+')
 unitFile.write("UnitID,FacultyID\n")
 
+#sorts all the units by facultyID + alphabetically and then writes it in a CSV
+
 for line in faculties:
 	splitLine = line.split(',') #splits line into a list between the comma
-	facultyID = splitLine[0]
+	facultyID = splitLine[0] #just the faculty ID
 
 
 
@@ -44,7 +46,7 @@ for line in faculties:
 		if(items['group_code'] == facultyID):
 			unit_code = items['unit_code']
 			unitFile.write(unit_code + ","+facultyID+'\n')
-			print(unit_code)
+
 
 		
 unitFile.close()
