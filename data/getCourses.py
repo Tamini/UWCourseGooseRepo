@@ -21,7 +21,7 @@ courses = open('courses.csv','w+')
 #CREATE SQL QUERY FILES HERE
 
 #writes the header
-courses.write('Course Code, Course Name, Faculty ID, Course Description\n')
+courses.write('Course ID, Course Code, Course Name, Faculty ID\n')
 
 for line in subjects:
 	splitLine = line.split(',') #splits line into a list between the comma
@@ -44,12 +44,13 @@ for line in subjects:
 		#starts getting the required stuff
 		#for now I'm just writing to a file all the data we need
 		if(items['academic_level'] == "undergraduate"):
+			courseID = items['course_id']
 			courseCode = items['subject'] + items['catalog_number']
 			courseName = items['title']
 			courseDescription = items['description']
 
 			#writes to the file
-			lineToWrite = courseCode +','+ courseName +','+ facultyID.rstrip('\n') + ",\"" + courseDescription + "\"" + '\n'
+			lineToWrite = courseID + ',' + courseCode +','+ courseName +','+ facultyID
 			courses.write(lineToWrite)
 
 			#INSERT SQL QUERIES FROM TRISTAN HERE
