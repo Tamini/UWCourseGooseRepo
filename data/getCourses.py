@@ -57,7 +57,7 @@ for line in subjects:
 			courses.write(lineToWrite)
 
 			#Writes to sql files
-			sqlCreateWrite = "CREATE TABLE "+courseCode +"(id INT(255) NOT NULL AUTO_INCRMENT, ratings INT(255) NOT NULL, comments VARCHAR(255), PRIMARY KEY (id));" #creates the table
+			sqlCreateWrite = "CREATE TABLE "+courseCode +"(id INT(255) NOT NULL AUTO_INCREMENT, ratings INT(255) NOT NULL, comments VARCHAR(255), PRIMARY KEY (id));" #creates the table
 
 			sqlInsertWrite = "INSERT INTO master(category_id, category_name, course_id, course_name, course_description) "
 			sqlInsertWrite += "VALUES (\'"+facultyID.rstrip('\n') + "\',\'" + facultyName.rstrip('\n') + "\',\'" + courseCode + "\',\'" + courseName + "\',\'" + courseDescription + "\');"
