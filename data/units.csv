@@ -1,0 +1,68 @@
+UnitID,FacultyID,FacultyName
+AHS,AHS,Applied Health Sciences
+AHSDEAN,AHS,Applied Health Sciences
+HLTHGERON,AHS,Applied Health Sciences
+KIN,AHS,Applied Health Sciences
+REC,AHS,Applied Health Sciences
+ACC,ART,Arts
+ANTH,ART,Arts
+ART,ART,Arts
+ARTSDEAN,ART,Arts
+CLASSICS,ART,Arts
+DANCE,ART,Arts
+DRAMA,ART,Arts
+ECON,ART,Arts
+ENGL,ART,Arts
+FINE,ART,Arts
+FR,ART,Arts
+GERSLAV,ART,Arts
+HIST,ART,Arts
+PHIL,ART,Arts
+PSCI,ART,Arts
+PSYCH,ART,Arts
+RS,ART,Arts
+SOC,ART,Arts
+SPAN,ART,Arts
+WS,ART,Arts
+CGC,CGC,Conrad Grebel
+ARCH,ENG,Engineering
+CBET,ENG,Engineering
+CHE,ENG,Engineering
+CIVE,ENG,Engineering
+ECE,ENG,Engineering
+ENG,ENG,Engineering
+ENGDEAN,ENG,Engineering
+GEOE,ENG,Engineering
+ME,ENG,Engineering
+MSCI,ENG,Engineering
+STV,ENG,Engineering
+SYDE,ENG,Engineering
+ENV,ENV,Environment
+ENVDEAN,ENV,Environment
+ERS,ENV,Environment
+GEOG,ENV,Environment
+PLAN,ENV,Environment
+SEED,ENV,Environment
+GRAD,GRAD,Graduate Studies
+GRADDEAN,GRAD,Graduate Studies
+IS,IS,Independent Studies
+AMATH,MAT,Mathematics
+CO,MAT,Mathematics
+CS,MAT,Mathematics
+ICR,MAT,Mathematics
+MAT,MAT,Mathematics
+MATHDEAN,MAT,Mathematics
+PMATH,MAT,Mathematics
+STATACTSC,MAT,Mathematics
+REN,REN,Renison
+BIOL,SCI,Science
+CHEM,SCI,Science
+EARTH,SCI,Science
+OPTOM,SCI,Science
+PHARM,SCI,Science
+PHYS,SCI,Science
+SCI,SCI,Science
+SCIDEAN,SCI,Science
+STJ,STJ,St. Jeromes
+STP,STP,St. Pauls
+VPA,VPA,Interdisciplinary
