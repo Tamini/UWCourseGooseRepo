@@ -19,14 +19,16 @@ subjects = open('subjects.csv','r')
 courses = open('courses.csv','w+')
 
 #CREATE SQL QUERY FILES HERE
-
+sqlInsertFile = open('insertTables.sql', 'w+')
+sqlCreateFile = open('createTables.sql', 'w+')
 #writes the header
-courses.write('Course ID, Course Code, Course Name, Faculty ID\n')
+courses.write('Course ID, Course Code, Course Name, Faculty ID, Faculty Name\n')
 
 for line in subjects:
 	splitLine = line.split(',') #splits line into a list between the comma
 	subjectName = splitLine[0] #name of the subject
 	facultyID = splitLine[1] #faculty
+	facultyName = splitLine[2]
 
 	#skips the first line in the file
 	if(facultyID == "FacultyID"):
@@ -36,6 +38,7 @@ for line in subjects:
 	url = baseUrl + subjectName + ".json?key="+api_key
 	print(url)
 	website = urllib.request.urlopen(url)
+
 	#gets the user's data
 	data = json.loads(website.read().decode("utf-8"))
 
@@ -50,14 +53,17 @@ for line in subjects:
 			courseDescription = items['description']
 
 			#writes to the file
-			lineToWrite = courseID + ',' + courseCode +','+ courseName +','+ facultyID
+			lineToWrite = courseID + ',' + courseCode +','+ courseName +','+ facultyID + facultyName
 			courses.write(lineToWrite)
 
-			#INSERT SQL QUERIES FROM TRISTAN HERE
+			#Writes to sql files
+			sqlCreateWrite = "CREATE TABLE "+courseCode +"(id INT(255) NOT NULL AUTO_INCRMENT, ratings INT(255) NOT NULL, comments VARCHAR(255), PRIMARY KEY (id));" #creates the table
 
+			sqlInsertWrite = "INSERT INTO master(category_id, category_name, course_id, course_name, course_description) "
+			sqlInsertWrite += "VALUES (\'"+facultyID.rstrip('\n') + "\',\'" + facultyName.rstrip('\n') + "\',\'" + courseCode + "\',\'" + courseName + "\',\'" + courseDescription + "\');"
 
-
-
+			sqlCreateFile.write(sqlCreateWrite + '\n')
+			sqlInsertFile.write(sqlInsertWrite + '\n')
 
 		
 subjects.close()
