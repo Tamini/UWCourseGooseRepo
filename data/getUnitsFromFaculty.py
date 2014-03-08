@@ -26,13 +26,14 @@ data = json.loads(website.read().decode("utf-8"))
 faculties = open('faculties.csv', 'r')
 
 unitFile = open('units.csv', 'w+')
-unitFile.write("UnitID,FacultyID\n")
+unitFile.write("UnitID,FacultyID,FacultyName\n")
 
 #sorts all the units by facultyID + alphabetically and then writes it in a CSV
 
 for line in faculties:
 	splitLine = line.split(',') #splits line into a list between the comma
 	facultyID = splitLine[0] #just the faculty ID
+	facultyName = splitLine[1]
 
 
 
@@ -45,7 +46,7 @@ for line in faculties:
 		#gets the names and the faculty codes
 		if(items['group_code'] == facultyID):
 			unit_code = items['unit_code']
-			unitFile.write(unit_code + ","+facultyID+'\n')
+			unitFile.write(unit_code + ","+facultyID+ ',' + facultyName)
 
 
 		

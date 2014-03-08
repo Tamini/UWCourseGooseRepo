@@ -26,7 +26,7 @@ data = json.loads(website.read().decode("utf-8"))
 units = open('units.csv', 'r')
 
 subjectFile = open('subjects.csv', 'w+')
-subjectFile.write("SubjectID,FacultyID\n")
+subjectFile.write("SubjectID,FacultyID,FacultyName\n")
 
 #sorts all the units by units + alphabetically and then writes it in a CSV
 
@@ -34,6 +34,7 @@ for line in units:
 	splitLine = line.split(',') #splits line into a list between the comma
 	unitName = splitLine[0] #name of the unit
 	facultyID = splitLine[1] #faculty
+	facultyName=splitLine[2]
 
 
 
@@ -46,7 +47,7 @@ for line in units:
 		#writes the subject name followed by the faculty
 		if(items['unit'] == unitName):
 			subject = items['subject']
-			subjectFile.write(subject + ","+facultyID)
+			subjectFile.write(subject + ","+facultyID+','+facultyName)
 
 
 		
