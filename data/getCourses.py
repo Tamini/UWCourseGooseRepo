@@ -68,4 +68,6 @@ for line in subjects:
 		
 subjects.close()
 courses.close()
+sqlInsertFile.close()
+sqlCreateFile.close()
 input("Enter any key to exit: ")
