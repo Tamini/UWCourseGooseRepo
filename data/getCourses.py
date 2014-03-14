@@ -8,6 +8,16 @@ import urllib.request
 import urllib.parse
 from pprint import pprint
 
+#To prevent sql queries from messing up
+def escapeQuotes( string ):
+	for char in string:
+		if (char == "'"):
+			string = string.replace(char, "''")
+		elif(char == "\""):
+			string = string.replace(char,"\"\"")
+
+	return string
+
 print("Getting all the courses and writing the sql queries")
 
 #gets all the subjects 
@@ -61,7 +71,8 @@ for line in subjects:
 
 			sqlInsertWrite = "INSERT INTO master(category_id, category_name, course_id, course_name, course_description) "
 			sqlInsertWrite += "VALUES (\'"+facultyID.rstrip('\n') + "\',\'" + facultyName.rstrip('\n') + "\',\'" + courseCode + "\',\'" + courseName + "\',\'" + courseDescription + "\');"
-
+			sqlInsertWrite = escapeQuotes(sqlInsertWrite)
+			
 			sqlCreateFile.write(sqlCreateWrite + '\n')
 			sqlInsertFile.write(sqlInsertWrite + '\n')
 
