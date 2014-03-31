@@ -63,7 +63,7 @@ for line in subjects:
 			courseDescription = items['description']
 
 			#writes to the file
-			lineToWrite = courseID + ',' + courseCode +','+ courseName +','+ "\""+courseDescription +"\"" + "," + facultyID
+			lineToWrite = courseID + ',' + courseCode +','+ courseName +','+ "\""+courseDescription +"\"" + "," + facultyID +"\n"
 			courses.write(lineToWrite)
 		
 subjects.close()
