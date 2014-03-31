@@ -32,7 +32,7 @@ courses = open('courses.csv','w+')
 #sqlInsertFile = open('insertTables.sql', 'w+')
 #sqlCreateFile = open('createTables.sql', 'w+')
 #writes the header
-courses.write('Course ID, Course Code, Course Name, Faculty ID, Faculty Name\n')
+courses.write('Course ID, Course Code, Course Name, Course Description, Faculty ID\n')
 
 for line in subjects:
 	splitLine = line.split(',') #splits line into a list between the comma
