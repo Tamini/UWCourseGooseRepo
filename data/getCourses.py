@@ -63,17 +63,8 @@ for line in subjects:
 			courseDescription = items['description']
 
 			#writes to the file
-			lineToWrite = courseID + ',' + courseCode +','+ courseName +','+ facultyID + facultyName
+			lineToWrite = courseID + ',' + courseCode +','+ courseName +','+ "\""+courseDescription +"\"" + "," + facultyID
 			courses.write(lineToWrite)
-
-			#Writes to sql files
-			sqlCreateWrite = "CREATE TABLE "+courseCode +"(id INT(255) NOT NULL AUTO_INCRMENT, ratings INT(255) NOT NULL, comments VARCHAR(255), PRIMARY KEY (id));" #creates the table
-
-			sqlInsertWrite = "INSERT INTO master(category_id, category_name, course_id, course_name, course_description) "
-			sqlInsertWrite += "VALUES (\'"+facultyID.rstrip('\n') + "\',\'" + facultyName.rstrip('\n') + "\',\'" + courseCode + "\',\'" + courseName + "\',\'" + escapeQuotes(courseDescription) + "\');"
-
-			sqlCreateFile.write(sqlCreateWrite + '\n')
-			sqlInsertFile.write(sqlInsertWrite + '\n')
 
 		
 subjects.close()

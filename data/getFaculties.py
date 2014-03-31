@@ -23,15 +23,29 @@ data = json.loads(website.read().decode("utf-8"))
 #creates the file to write to
 
 faculties = open('faculties.csv', 'w+')
-faculties.write("Faculty ID,Faculty name\n")
+faculties.write("Faculty ID,Faculty name,Colour\n")
 
 for items in data['data']:
 
 	#gets the names and the faculty codes
 	code = (items['group_code'])
 	name = (items['group_short_name'])
-
 	lineToWrite = code+","+name
+	if(code == "AHS"):
+		lineToWrite +=",turquoise"
+	elif(code == "MAT"):
+		lineToWrite+=",pink"
+	elif(code == "ENG"):
+		lineToWrite+=",purple"
+	elif(code == "ART"):
+		lineToWrite+=",orange"
+	elif(code == "SCI"):
+		lineToWrite+=",blue"
+	elif(code == "ENV"):
+		lineToWrite+=",green"
+	else:
+		lineToWrite+=",null"
+
 
 	faculties.write(lineToWrite + "\n")
 

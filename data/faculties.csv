@@ -1,15 +1,15 @@
-Faculty ID,Faculty name
-AHS,Applied Health Sciences
-ART,Arts
-CGC,Conrad Grebel
-ENG,Engineering
-ENV,Environment
-GRAD,Graduate Studies
-IS,Independent Studies
-MAT,Mathematics
-REN,Renison
-SCI,Science
-STJ,St. Jeromes
-STP,St. Pauls
-THL,Theology
-VPA,Interdisciplinary
+Faculty ID,Faculty name,Colour
+AHS,Applied Health Sciences,turquoise
+ART,Arts,orange
+CGC,Conrad Grebel,null
+ENG,Engineering,purple
+ENV,Environment,green
+GRAD,Graduate Studies,null
+IS,Independent Studies,null
+MAT,Mathematics,pink
+REN,Renison,null
+SCI,Science,blue
+STJ,St. Jeromes,null
+STP,St. Pauls,null
+THL,Theology,null
+VPA,Interdisciplinary,null
