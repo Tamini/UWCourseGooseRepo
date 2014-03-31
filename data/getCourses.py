@@ -8,6 +8,16 @@ import urllib.request
 import urllib.parse
 from pprint import pprint
 
+#To prevent sql queries from messing up
+def escapeQuotes( string ):
+	for char in string:
+		if (char == "'"):
+			string = string.replace(char, "''")
+		elif(char == "\""):
+			string = string.replace(char,"\"\"")
+
+	return string
+
 print("Getting all the courses and writing the sql queries")
 
 #gets all the subjects 
@@ -19,8 +29,8 @@ subjects = open('subjects.csv','r')
 courses = open('courses.csv','w+')
 
 #CREATE SQL QUERY FILES HERE
-sqlInsertFile = open('insertTables.sql', 'w+')
-sqlCreateFile = open('createTables.sql', 'w+')
+#sqlInsertFile = open('insertTables.sql', 'w+')
+#sqlCreateFile = open('createTables.sql', 'w+')
 #writes the header
 courses.write('Course ID, Course Code, Course Name, Faculty ID, Faculty Name\n')
 
@@ -53,21 +63,11 @@ for line in subjects:
 			courseDescription = items['description']
 
 			#writes to the file
-			lineToWrite = courseID + ',' + courseCode +','+ courseName +','+ facultyID + facultyName
+			lineToWrite = courseID + ',' + courseCode +','+ courseName +','+ "\""+courseDescription +"\"" + "," + facultyID
 			courses.write(lineToWrite)
-
-			#Writes to sql files
-			sqlCreateWrite = "CREATE TABLE "+courseCode +"(id INT(255) NOT NULL AUTO_INCREMENT, ratings INT(255) NOT NULL, comments VARCHAR(255), PRIMARY KEY (id));" #creates the table
-
-			sqlInsertWrite = "INSERT INTO master(category_id, category_name, course_id, course_name, course_description) "
-			sqlInsertWrite += "VALUES (\'"+facultyID.rstrip('\n') + "\',\'" + facultyName.rstrip('\n') + "\',\'" + courseCode + "\',\'" + courseName + "\',\'" + courseDescription + "\');"
-
-			sqlCreateFile.write(sqlCreateWrite + '\n')
-			sqlInsertFile.write(sqlInsertWrite + '\n')
-
 		
 subjects.close()
 courses.close()
-sqlInsertFile.close()
-sqlCreateFile.close()
+#sqlInsertFile.close()
+#sqlCreateFile.close()
 input("Enter any key to exit: ")
