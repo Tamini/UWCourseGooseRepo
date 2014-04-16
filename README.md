@@ -8,6 +8,5 @@ An Android application that allows students at the University of Waterloo to rat
 TODO
 ====
 
-###Generate the following csvs:
-* Course ID, Course Name, Course Code, Course Description, Faculty ID
-* Faculty ID, Faculty Name, Colour
+* Fix course CSV so it is aligned with DB schema,
+* Import CSVs into DB
